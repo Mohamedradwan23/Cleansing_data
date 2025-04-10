@@ -1,3 +1,5 @@
+-- CREATING A SILVER LAYER THAT WE CAN GO TO GOLD LAYER WITH CLEANED DATA : - 
+
 use DataWarehouseData ;
 go 
 -------------------------------------
@@ -163,7 +165,7 @@ from bronzee.crm_sales_details
 
 
 select * from silverr.crm_sales_details;
--------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 if OBJECT_ID ('silverr.erp_cust_az12','U') is not null
 	drop table silverr.erp_cust_az12 ;
 
@@ -191,7 +193,7 @@ case
 	end as gen
 
 from bronzee.erp_cust_az12;
-----------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 if OBJECT_ID ('silverr.erp_loc_a101','U') is not null
@@ -211,8 +213,7 @@ select
 		when trim(cntry) = '' or cntry is  null then 'n/v'
 		else trim(cntry) end as cntry
 from bronzee.erp_loc_a101 ;
-----------------------------------------
-if OBJECT_ID ('silverr.erp_px_car_g1v2','U') is not null
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------if OBJECT_ID ('silverr.erp_px_car_g1v2','U') is not null
 	drop table silverr.erp_px_car_g1v2 ;
 
 Create table silverr.erp_px_car_g1v2(
